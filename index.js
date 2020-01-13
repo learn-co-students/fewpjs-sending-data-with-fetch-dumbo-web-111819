@@ -13,7 +13,8 @@ function submitData(userName, userEmail){
       email: userEmail
     })
   })
-  .then(r => r.json()
+  .then(function(r){
+    return r.json()
   })
   .then(newObj => {
     document.body.innerHTML = newObj.id
